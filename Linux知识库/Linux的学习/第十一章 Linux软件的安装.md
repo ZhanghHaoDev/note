@@ -1,0 +1,43 @@
+# 第十一章 Linux软件的安装
+
+## 1. 可执行文件
+- **定义**：在Linux上，可执行文件是指那些有执行权限的文件，通常是二进制文件。
+- **检查**：使用`ls -l`命令查看文件权限，具有`x`权限的文件可执行。
+
+## 2. Make工具
+- **用途**：自动化编译过程，简化大型项目编译步骤。
+- **Makefile**：指导`make`命令如何编译程序的文件。
+- **使用**：
+  ```bash
+  make       # 编译程序
+  make clean # 清理编译生成的文件
+  ```
+
+## 3. Tarball软件
+- **定义**：一种压缩文件格式，通常包含源代码和编译指令。
+- **用途**：便于软件的分发和存储。
+
+## 4. RPM软件包
+- **定义**：Red Hat Package Manager，用于Red Hat及其衍生版Linux的包管理器。
+- **用途**：安装、卸载、升级和管理软件包。
+- **命令**：
+  ```bash
+  rpm -ivh package.rpm  # 安装RPM包
+  rpm -e package_name    # 卸载RPM包
+  ```
+
+## 5. YUM软件包管理器
+- **定义**：Yellowdog Updater Modified，用于管理Red Hat系列Linux软件包的工具。
+- **用途**：自动化软件包的下载、安装、更新和删除。
+- **命令**：
+  ```bash
+  sudo yum install 包名称    # 安装软件
+  sudo yum update            # 更新软件
+  sudo yum search 包名称    # 搜索软件
+  sudo yum remove 包名称    # 删除软件
+  ```
+
+## 6. 其他软件安装方法
+- **源码编译**：下载源码，使用`./configure`、`make`、`make install`命令编译安装。
+- **DEB包**（Debian系）：使用`dpkg`或`apt`命令安装`.deb`文件。
+- **软件中心**：许多Linux发行版提供图形界面的软件中心用于软件管理。

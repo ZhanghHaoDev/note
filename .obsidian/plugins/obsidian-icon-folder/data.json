@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiImage",
+      "LiFile"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false
+  },
+  "硬件开发": "LiFile",
+  "面试相关": "LiFile",
+  "Linux知识库": "LiFile",
+  "python知识库": "LiFile",
+  "rust知识库": "LiFile",
+  "C C++知识库": "LiFile",
+  "rust知识库/rust的笔记": "LiFile",
+  "rust知识库/rust的学习": "LiFile",
+  "python知识库/python的笔记": "LiFile",
+  "python知识库/python的学习": "LiFile",
+  "python知识库/image": "LiImage"
+}
