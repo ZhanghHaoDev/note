@@ -92,6 +92,16 @@ include_directories(${gflags_SOURCE_DIR}/src ${gflags_BINARY_DIR})
 1. 使用glog的时候，需要先把glog初始化
 2. 使用glog完毕，需要释放资源操作
 
+### 初始化的问题
+
+我们在使用glog的时候，需要初始化glog库和最后释放这个库的资源，这个时候遇到一个问题。
+
+我们创建一个模块（目录），下面有多个类，这个时候glog是在那个类当中初始化和释放资源？
+
+解决办法：
+1. 在main函数当中初始化和释放glog的资源
+2. 创建一个管理glog的单例的类，只需要在main函数当中include引入这个单例的类，其他的模块类，不需要引入这个类
+
 ```cpp
 // glog初始化
 google::InitGoogleLogging("avformat_model");
