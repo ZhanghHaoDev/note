@@ -56,6 +56,7 @@ hello: hello.c
 
 # 4. 推荐的书籍
 - 推荐阅读GNU make的官方文档，它提供了Makefile的详细指南和高级技巧。
+- 国内推荐《和我一起写Makefile》[https://github.com/seisman/how-to-write-makefile]
 
 ### 注意事项
 - 确保Makefile中的命令行以Tab字符开头。
