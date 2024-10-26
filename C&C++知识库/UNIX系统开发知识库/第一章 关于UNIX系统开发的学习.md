@@ -7,8 +7,7 @@
 1. C语言的学习
 3. UNIX系统编程的学习
 4. UNIX网络编程的学习
-5. CMake的学习
-6. Makefile的学习
+5. UNIX下的工具链的学习
 
 ## 3. 关于POSIX标准的学习
 

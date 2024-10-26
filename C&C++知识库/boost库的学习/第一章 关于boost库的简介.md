@@ -44,3 +44,14 @@ brew install boost
 8. Boost.Python：提供C++与Python的互操作支持。
 9. Boost.Serialization：提供对象序列化支持。
 10. Boost.Test：提供单元测试框架。
+11. Boost.Log: boost的日志库
+
+## 4. boost与CMake
+
+1. 我们在大多数的发行版Linux和macOS上都可以使用包管理器来安装预编译好的boost库
+2. Boost库默认使用的是Boost.Build（也称为b2或bjam）构建系统。Boost.Build是一个强大的构建系统，专门用于构建和安装Boost库及其组件。
+3. Boost库对CMake的支持是积极的。虽然Boost库默认使用Boost.Build（b2或bjam）作为其构建系统，但Boost库也提供了良好的CMake支持，使得开发者可以方便地在CMake项目中查找和链接Boost库。
+4. CMake 3.17 及以上版本中，FindBoost 模块已被移除，因此需要设置策略 CMP0167 来使用新的 Boost 配置方式。
+    解决办法：cmake_policy(SET CMP0167 NEW)  # 设置策略以消除警告
+            find_package(Boost REQUIRED COMPONENTS system filesystem) # 查找特定的组件
+            target_link_libraries(boost_stu Boost::system Boost::filesystem)

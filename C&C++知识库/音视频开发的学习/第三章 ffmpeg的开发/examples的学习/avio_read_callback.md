@@ -83,3 +83,31 @@
     【注意】：这个函数需要配合av_file_unmap这个函数来使用
         但是av_dump_format 这个函数并不能单独的使用，需要配合avformat_open_input 和 avformat_find_stream_info 这两个才可以
         并且这个函数的输出，日志等级设置为`AV_LOG_INFO`
+
+8. avcodec_send_packet 这个函数用于将编码后的数据包发送给解码器，这个函数通常与`avcodec_receive_frame`配合使用
+    函数原型：int avcodec_send_packet(AVCodecContext *avctx, const AVPacket *avpkt);
+    函数参数：AVCodecContext *avctx：指向解码器上下文的指针。这个上下文包含了解码器的配置信息和状态。
+            const AVPacket *avpkt：指向要发送的数据包的指针。这个数据包包含了编码后的数据。
+    函数返回值：成功返回0，失败返回错误码
+
+9. avcodec_receive_frame 这个函数用于从解码器（decoder）接收解码后的帧（frame）。这个函数通常与 avcodec_send_packet 函数配合使用，以实现完整的解码流程。
+    函数原型：int avcodec_receive_frame(AVCodecContext *avctx, AVFrame *frame);
+    函数参数：AVCodecContext *avctx：指向解码器上下文的指针。这个上下文包含了解码器的配置信息和状态。
+            AVFrame *frame：指向要接收解码后帧的指针。这个帧结构体将包含解码后的数据。
+    函数返回值：成功返回0，失败返回错误码
+
+10. AVERROR(EAGAIN) 这个宏定义表示操作需要再次尝试，常在解码或编码过程中，当输入或输出缓冲区未准备好时，会返回这个错误码。
+11. AVERROR_EOF 表示操作已经到达文件或数据流的末尾
+12. av_get_bytes_per_sample() 这个函数用于获取指定音频采样格式的每个样本的字节数。这个函数在处理音频数据时非常有用，可以帮助你确定每个音频样本的大小，以便正确地处理和存储音频数据。
+    函数原型：int av_get_bytes_per_sample(enum AVSampleFormat sample_fmt);
+    函数参数：enum AVSampleFormat sample_fmt：音频采样格式。AVSampleFormat 是一个枚举类型，包含了所有支持的音频采样格式
+    函数返回值：成功返回指定音频采样格式的每个样本的字节数，失败返回负数错误码
+
+13. av_sample_fmt_is_planar 用于检查音频的格式是否为平面格式的函数
+    函数原型：int av_sample_fmt_is_planar(enum AVSampleFormat sample_fmt);
+    函数参数：这是一个 AVSampleFormat 枚举类型的值，它表示要检查的音频样本格式
+    函数返回值：函数返回一个整型值（int），如果 sample_fmt 是平面格式，则返回非零值（通常为1），表示是平面格式；如果 sample_fmt 不是平面格式，则返回0。
+    
+    音频是否为平面格式：在音频数据处理中，音频样本的存储方式主要有两种：平面格式（Planar Format）和交错格式（Interleaved Format）。这两种格式在多声道音频数据的存储方式上有所不同。
+    平面格式（Planar Format）在平面格式中，每个声道的数据是分开存储的。也就是说，所有的左声道样本存储在一个连续的内存块中，所有的右声道样本存储在另一个连续的内存块中，以此类推。
+    交错格式（Interleaved Format）在交错格式中，所有声道的数据是交错存储的。也就是说，每个声道的样本依次存储在一个连续的内存块中。
