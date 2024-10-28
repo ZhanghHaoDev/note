@@ -1,15 +1,36 @@
-# 笔记
+# note
 
-1. 知识库是第一层文件夹
-2. 笔记是下面的模块，或者自己整理的内容
-3. XXX的学习是单元
-4. 不存放电子书，电子书太大了，上传不了
-5. note不记录全部的代码，只记录重要的部分。
-6. 重要的笔记配合仓库的源码学习，标记出源码的位置
+## 1. note的简介
 
-## TODOList
+1. 知识库是第一层的目录
+2. 笔记是自己随手记录的内容，会归纳到知识库中
+3. 每个知识库都有对应的代码仓库
 
-+ 音视频开发的思维独特
-+ C/C++开发思维导图
-+ C/C++笔记
-+ SDL的笔记
+## 2. 代码仓库
+
+1. [C&C++知识库/C++知识库/标准库（Standard Library）](https://github.com/ZhanghHaoDev/std_stu)
+2. [C&C++知识库/boost的学习](https://github.com/ZhanghHaoDev/boost_stu)
+3. [C&C++知识库/音视频开发的学习]()
+4. [C&C++知识库/UNIX系统开发知识库/第五章 UNIX下的工具链的学习](https://github.com/ZhanghHaoDev/cmake)
+
+## 3. todo
+
+1. sdl2代码仓库和ffmpeg仓库的合并，合并为音视频开发的学习
+2. unix仓库的建立
+
+## 4. 知识体系
+
+```plantuml
+@startmindmap
+* C&C++知识库
+** C++知识库
+*** 标准库（Standard Library）
+*** 语法部分（Syntax）
+*** boost的学习
+*** 音视频开发的学习
+** UNIX系统开发知识库
+*** C语言的学习
+*** UNIX系统开发
+*** UNIX网络开发
+@endmindmap
+```

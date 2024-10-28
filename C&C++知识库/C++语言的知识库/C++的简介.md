@@ -55,14 +55,16 @@ STL是C++标准库的核心部分，提供了一组通用的模板类和函数�
 
 2. 输入输出流（I/O Streams）
 C++标准库提供了一组类和函数，用于处理输入和输出操作。主要包括：
-+ 标准输入输出流：如cin、cout、cerr、clog。
-+ 文件流：如ifstream、ofstream、fstream。
-+ 文件系统库：如filesystem，用于文件和目录的操作。
-+ 字符串流：如istringstream、ostringstream、stringstream。   
++ 标准输入输出流 ：std::cin、std::cout、std::cerr、std::clog
++ 文件流： ifstream、ofstream、fstream
++ 字符串流： istringstream、ostringstream、stringstream
++ 基础流类：std::ios、std::istream、std::ostream、std::iostream
++ 字符串流类：std::istringstream、std::ostringstream、std::stringstream
 
 3. 字符串和正则表达式（Strings and Regular Expressions）
 C++标准库提供了强大的字符串处理功能和正则表达式支持。
 + 字符串类：如std::string、std::wstring。
++ 字符串操作（String Operations）：如std::find、std::replace、std::substr。
 + 正则表达式：如std::regex、std::smatch、std::regex_search、std::regex_replace。
 
 4. 多线程和并发（Multithreading and Concurrency）
