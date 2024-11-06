@@ -7,6 +7,10 @@
 3. Linux操作系统note：Linux系统操作知识库/Linux的学习
 4. 开发环境：操作系统：macOS，编辑器：VSCode，构建工具：CMake，编译器：llvm
 
+### note 知识点
+1. unix的设计哲学：一切皆文件
+2. 注意函数的参数是输入/输出（in输入 ou输出）
+
 ### 参考资料
 
 1. C程序设计语言
@@ -15,6 +19,7 @@
 4. TCPIP详解 卷1：协议（原书第2版） 
 5. TCPIP高效编程 改善网络程序的44个技巧 
 6. Linux高性能服务器编程
+7. 深入理解计算机系统（csapp）
 
 ### UNIX系统编程练习项目
 
@@ -46,3 +51,20 @@
     ```
 
 ## 2. UNIX系统编程知识库的知识体系
+
+```shell
+UNIX 环境开发
+- 第一章 UNIX 系统编程简介
+- 第二章 UNIX 系统编程的基础知识
+- 第三章 文件IO（File and IO）
+-- 标准输入输出 (Standard IO) 
+-- 文件输入输出(File IO)
+-- 文件系统操作 (File System Operations)
+-- 错误处理 (Error Handling)
+- 第四章 进程（Processes）
+- 第五章 线程（Threads）
+- 第六章 信号（Signals）
+- 第七章 网络编程（Network）
+- 第八章 其他主题
+- 项目笔记
+```
