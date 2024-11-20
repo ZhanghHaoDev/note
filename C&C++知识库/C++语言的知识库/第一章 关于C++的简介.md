@@ -2,21 +2,31 @@
 
 ## 1. 简介
 
-条款-01：视c++为一个语言联邦
+1. 条款-01：视c++为一个语言联邦
+2. C++是一种通用的编程语言，由Bjarne Stroustrup在20世纪80年代初开发。它是C语言的扩展，增加了面向对象编程、泛型编程和低级内存操作等特性。C++被广泛应用于系统编程、游戏开发、嵌入式系统、金融工程等领域。
+3. C++的语言特性包括多种编程范式，如面向对象编程、泛型编程等。这些编程范式的存在是为了提供灵活的工具和方法，以解决不同的**程序设计问题**
 
-C++是一种通用的编程语言，由Bjarne Stroustrup在20世纪80年代初开发。它是C语言的扩展，增加了面向对象编程、泛型编程和低级内存操作等特性。C++被广泛应用于系统编程、游戏开发、嵌入式系统、金融工程等领域。
+### 代码部分
 
-### C++的特点
-- **面向对象编程**：支持类和对象、继承、多态、封装等面向对象的特性。
-- **泛型编程**：通过模板机制实现代码的复用和泛型编程。
-- **低级内存操作**：支持指针和直接内存操作，提供了对硬件的高效控制。
-- **标准库**：提供了丰富的标准库，包括STL（标准模板库），支持常用的数据结构和算法。
+1. 代码仓库：[std_stu](https://github.com/ZhanghHaoDev/std_stu)
+2. 开发环境：C++20，macos，cmake，vscode，llvm
 
-### C++的应用领域
-- **系统编程**：操作系统、驱动程序等底层软件的开发。
-- **游戏开发**：高性能游戏引擎和图形渲染的实现。
-- **嵌入式系统**：嵌入式设备和实时系统的开发。
-- **金融工程**：高频交易系统和金融模型的实现。
+### C++ 参考资料
+
++ 网站：
+  - [cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+  - [cplusplus](https://legacy.cplusplus.com/)
+  - [C++ 核心指导方针](https://github.com/lynnboy/CppCoreGuidelines-zh-CN?tab=readme-ov-file)
+  - [小彭老师领衔编写，现代C++的中文百科全书](https://github.com/parallel101/cppguidebook)
++ 书籍：
+  - C++ Primer（以这个为主导）
+  - C++标准库：第二版
+  - C++ 20 红宝书
+  - C++程序设计语言
+  - STL 内核剖析
+  - Effective STL中文版：50条有效使用STL的经验
++ 工具：
+  - cppman
 
 ## 2. C++的知识体系
 
@@ -46,14 +56,16 @@ C++是一种通用的编程语言，由Bjarne Stroustrup在20世纪80年代初�
 
 ### 标准库部分
 
-1. STL（Standard Template Library）
-STL是C++标准库的核心部分，提供了一组通用的模板类和函数，用于数据结构和算法。STL包括以下几个主要组件：
-+ 容器（Containers）：如vector、list、deque、set、map等。
-+ 迭代器（Iterators）：用于遍历容器元素的对象。
-+ 算法（Algorithms）：如sort、find、copy、accumulate等。
-+ 函数对象（Function Objects）：如plus、minus、multiplies等。
+1. 标准模板库 STL （Standard Template Library）
+C++的标准模板库（STL）是C++标准库的核心，基于泛型编程，包含容器、迭代器、算法和函数对象等组件，需要重点关注每个组件的原理和内部实现：
++ 容器（Containers）：vector、list、deque、set、map、unordered_set、unordered_map
++ 算法（Algorithms）：sort、find、copy、transform、accumulate、count
++ 迭代器（Iterators）：input_iterator、output_iterator、forward_iterator、bidirectional_iterator、random_access_iterator
++ 仿函数（Functors）：plus、minus、multiplies、divides、modulus、negate
++ 适配器（Adapters）：stack、queue、priority_queue
++ 配接器（Binders）：bind、mem_fn、function、lambda
 
-2. 输入输出流（I/O Streams）
+1. 输入输出流（I/O Streams）
 C++标准库提供了一组类和函数，用于处理输入和输出操作。主要包括：
 + 标准输入输出流 ：std::cin、std::cout、std::cerr、std::clog
 + 文件流： ifstream、ofstream、fstream
@@ -61,41 +73,41 @@ C++标准库提供了一组类和函数，用于处理输入和输出操作。�
 + 基础流类：std::ios、std::istream、std::ostream、std::iostream
 + 字符串流类：std::istringstream、std::ostringstream、std::stringstream
 
-3. 字符串和正则表达式（Strings and Regular Expressions）
+1. 字符串和正则表达式（Strings and Regular Expressions）
 C++标准库提供了强大的字符串处理功能和正则表达式支持。
 + 字符串类：如std::string、std::wstring。
 + 字符串操作（String Operations）：如std::find、std::replace、std::substr。
 + 正则表达式：如std::regex、std::smatch、std::regex_search、std::regex_replace。
 
-4. 多线程和并发（Multithreading and Concurrency）
+1. 多线程和并发（Multithreading and Concurrency）
 C++标准库提供了多线程和并发编程的支持。
 + 线程类：如std::thread。
 + 互斥量：如std::mutex、std::recursive_mutex。
 + 条件变量：如std::condition_variable。
 + 原子操作：如std::atomic。
 
-5. 时间和日期（Time and Date）
+1. 时间和日期（Time and Date）
 C++标准库提供了处理时间和日期的功能。
 + 时间点：如std::chrono::time_point。
 + 时钟：如std::chrono::system_clock、std::chrono::steady_clock。
 + 时间间隔：如std::chrono::duration。
 
-6. 数学库（Math Library）
+1. 数学库（Math Library）
 C++标准库提供了常用的数学函数和常量。
 + 数学函数：如std::abs、std::sqrt、std::pow、std::sin、std::cos、std::tan。
 + 随机数生成：如std::random_device、std::mt19937、std::uniform_int_distribution
 
-7. 类型支持库（Type Support Library）
+1. 类型支持库（Type Support Library）
 类型支持库提供了类型特征和类型转换的功能。
 + 类型特征：如std::is_same、std::is_integral、std::is_floating_point。
 + 类型转换：如std::static_pointer_cast、std::dynamic_pointer_cast。
 
-8. 内存管理库（Memory Management Library）
+1. 内存管理库（Memory Management Library）
 内存管理库提供了内存分配和管理的功能。
 + 智能指针：如std::unique_ptr、std::shared_ptr、std::weak_ptr。
 + 内存分配：如std::allocator、std::allocate_shared。
 
-9. 错误处理库（Error Handling Library）
+1. 错误处理库（Error Handling Library）
 错误处理库提供了异常处理和错误报告的功能。
 + 异常类：如std::exception、std::runtime_error、std::logic_error。
 + 错误代码：如std::error_code、std::error_condition。
@@ -211,44 +223,3 @@ C++标准库提供了常用的数学函数和常量。
 可变参数模板（Variadic Templates）：
 + 定义和使用可变参数模板。
 + 展开参数包。
-
-## 3. 实践与应用
-### 操作系统
-+ Windows：微软的Windows操作系统核心部分使用C++开发。
-+ Linux内核：虽然主要使用C语言开发，但许多Linux发行版的用户空间工具和应用程序使用C++开发。
-+ macOS：苹果的macOS操作系统中也包含大量使用C++开发的组件。
-
-### 游戏引擎
-+ Unreal Engine：由Epic Games开发的高性能游戏引擎，广泛用于AAA级游戏开发。
-+ Unity：虽然主要使用C#进行脚本编写，但其底层引擎部分使用C++开发。
-+ CryEngine：由Crytek开发的游戏引擎，以其高质量的图形渲染著称。
-
-### 浏览器
-+ Google Chrome：谷歌的Chrome浏览器使用C++开发，具有高性能和稳定性。
-+ Mozilla Firefox：Mozilla的Firefox浏览器也使用C++开发，支持丰富的扩展和插件。
-
-### 数据库
-+ MySQL：流行的开源关系型数据库管理系统，使用C++开发。
-+ MongoDB：流行的NoSQL数据库，使用C++开发，支持高性能和高扩展性。
-
-### 图形和多媒体
-+ Adobe Photoshop：著名的图像处理软件，使用C++开发，提供强大的图像编辑功能。
-+ Blender：开源的3D建模和动画制作软件，使用C++开发，广泛用于影视和游戏制作。
-+ VLC Media Player：开源的多媒体播放器，使用C++开发，支持多种音视频格式。
-
-### 集成开发环境（IDE）
-+ Microsoft Visual Studio：微软的集成开发环境，支持多种编程语言，使用C++开发。
-+ CLion：JetBrains开发的跨平台C++ IDE，提供智能代码补全和调试功能。
-
-### 科学计算和工程
-+ MATLAB：虽然主要使用MATLAB语言进行编程，但其底层核心部分使用C++开发。
-+ Simulink：MATLAB的附加工具，用于系统建模和仿真，底层使用C++开发。
-
-### 网络和通信
-+ Apache HTTP Server：流行的开源Web服务器，使用C++开发。
-+ Nginx：高性能的Web服务器和反向代理服务器，使用C++开发。
-
-### 金融工程
-+ QuantLib：开源的金融库，提供定价、风险管理和交易功能，使用C++开发。
-+ Bloomberg Terminal：金融数据和分析平台，底层使用C++开发。
-+ 这些软件和系统展示了C++在各个领域的广泛应用和强大功能。通过学习和掌握C++，你可以参与到这些高性能和高复杂度的软件开发中。

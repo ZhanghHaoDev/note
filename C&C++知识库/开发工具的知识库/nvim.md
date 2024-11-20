@@ -23,7 +23,7 @@ brew install nvim
 6. q 键退出，退出编辑页面，退出文件树
 7. F1 F2 切换标签页
 8. LSP（C/C++）clang cmake 代码补全，代码跳转 gd 跳转到声明，ctrl + t跳转到实现
-10. git 显示 新增，删除，修改等操作
+10. git 显示 新增，删除，修改等操作 命令：LazyGit
 11. 目前我把插件的目录 packer.nvim 安装到 ~/.config/nvim 目录下
 12. 下面的状态栏，颜色为橘黄色
 13. 命令模式输入w 保存全部文件
