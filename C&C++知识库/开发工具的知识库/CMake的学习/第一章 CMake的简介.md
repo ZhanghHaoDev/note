@@ -10,19 +10,22 @@ CMake是一个跨平台的构建工具，可以用来管理软件的构建过程
 - 支持自动化测试。
 - 支持软件的安装和打包
 
+### cmake推荐的书籍
+
+1. [Modern CMake 简体中文版](https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/)
+2. CMake Cookbook
+3. Mastering CMake（第七版）
+
 ## 2. CMake的安装
 
-1. **Windows**：通过官方网站下载安装包或使用包管理器（如 winget）。
-
-2. Linux 下安装 CMake
-
 ```shell
+# Windows下的安装
+访问官方网站，下载windows的二进制包，添加环境变量
+
+# Linux下的安装
 sudo apt-get install cmake
-```
 
-3. macOS 下安装 CMake
-
-```shell
+# macOS下的安装
 brew install cmake
 ```
 
@@ -38,33 +41,3 @@ CMake的优点，主要在于他是一个跨平台的构建系统，可以生成
 - **Ninja**：专注于速度的小型构建系统，通常与 CMake 配合使用。
 - **MSBuild**：用于 .NET 和 Visual Studio 的构建系统。
 - **Gradle**：用于 Java 和 Android 的构建系统。
-
-## 4. CMake的基本工作流程
-
-1. 编写 CMakeLists.txt 文件，定义项目的构建规则。
-2. 创建源文件，包括头文件和源文件。
-3. 创建构建目录，用于存放生成的构建文件。
-4. 运行 CMake，生成构建文件。
-5. 使用构建系统编译源代码，生成可执行文件或库文件。
-
-## 5. Hello World 示例
-
-1. 创建一个源代码文件 `main.c`：
-
-```c
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-2. 创建一个 `CMakeLists.txt` 文件：
-
-```cmake
-cmake_minimum_required(VERSION 3.20)
-project(hello_world)
-
-add_executable(hello main.c)
-```
