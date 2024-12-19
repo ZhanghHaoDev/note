@@ -14,6 +14,7 @@
 3. [C&C++知识库/音视频开发的学习](https://github.com/ZhanghHaoDev/av_dev_study.git)
 4. [C&C++知识库/工具链的学习](https://github.com/ZhanghHaoDev/cmake)
 5. [UNIX系统开发知识库](https://github.com/ZhanghHaoDev/unix_stu.git)
+6. 面试相关另外有一个单独的仓库[C++面试八股文](https://github.com/ZhanghHaoDev/interview)
 
 ## 3. todo
 
@@ -22,12 +23,14 @@
     + 了解协程
 2. 目前在写unix相关的内容
     + unix 开发 下一步可以深入内核，或者应用层面，可以写一些较大的项目
-3. ffmpeg 相关的内容
+3. ffmpeg 相关的内容  --- 太难了吧
     + 首先要深入了解音视频的原理基础知识
     + 然后还是要多学习学习ffmpeg
     + 最后可以扩展一些音视频的行业开发知识
     + 解决cmake调用ffmpeg的问题，自己创建FindFFmpeg.cmake文件 这个测试当中
+    + 想创建一个qt的h264分析界面
 4. 创建图床，解决图片链接到问题
+5. 面试相关知识库，同步
 
 ## 4. 知识体系
 
